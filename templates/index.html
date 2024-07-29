@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizAnalytics System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <h1>BizAnalytics System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#user-management">User Management</a></li>
+            <li><a href="#dataset-management">Dataset Management</a></li>
+            <li><a href="#model-management">Model Management & Prediction</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="user-management">
+            <h2>User Management</h2>git
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+
+                <button type="submit">Create User</button>
+            </form>
+        </section>
+
+        <section id="dataset-management">
+            <h2>Dataset Management</h2>
+            <form>
+                <label for="dataset">Upload Dataset:</label>
+                <input type="file" id="dataset" name="dataset">
+
+                <button type="submit">Load Dataset</button>
+            </form>
+
+            <form>
+                <label for="sort">Sort By:</label>
+                <select id="sort" name="sort">
+                    <option value="name">district</option>
+                    <option value="date">Date</option>
+                </select>
+
+                <button type="submit">Sort Datasets</button>
+            </form>
+        </section>
+
+        <section id="model-management">
+            <h2>Model Management & Prediction</h2>
+            <form>
+                <label for="model">Deploy Model:</label>
+                <input type="file" id="model" name="model">
+
+                <button type="submit">Deploy Model</button>
+            </form>
+
+            <form>
+                <label for="prediction">Enter Data for Prediction:</label>
+                <input type="text" id="prediction" name="prediction">
+
+                <button type="submit">Predict</button>
+            </form>
+
+            <div id="visualization">
+                <h3>Data Visualization</h3>
+                <!-- Placeholder for data visualization -->
+                <div class="chart"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BizAnalytics System</p>
+    </footer>
+</body>
+
+</html>

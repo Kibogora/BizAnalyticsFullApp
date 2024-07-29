@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizAnalytics System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        #logo img {
+            max-width: 100px;
+        }
+        
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        form {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        form legend {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        form .form-group {
+            margin-bottom: 15px;
+        }
+        
+        form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        form .form-group input,
+        form .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        form button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        form button:hover {
+            background-color: #0056b3;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .chart {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo.png" alt="BizAnalytics Logo">
+        </div>
+        <h1>BizAnalytics System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#user-management">User Management</a></li>
+            <li><a href="#dataset-management">Dataset Management</a></li>
+            <li><a href="#model-management">Model Management & Prediction</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to BizAnalytics System</h2>
+            <p>This is the home page of the BizAnalytics System. Here you can manage users, datasets, and deploy models for prediction and data visualization.</p>
+        </section>
+
+        <section id="user-management">
+            <h2>User Management</h2>
+            <form>
+                <fieldset>
+                    <legend>Create a New User</legend>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit">Create User</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="dataset-management">
+            <h2>Dataset Management</h2>
+            <form class="mb-3">
+                <fieldset>
+                    <legend>Upload and Manage Datasets</legend>
+                    <div class="form-group">
+                        <label for="dataset">Upload Dataset:</label>
+                        <input type="file" id="dataset" name="dataset" required>
+                    </div>
+                    <button type="submit">Load Dataset</button>
+                </fieldset>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>Sort Datasets</legend>
+                    <div class="form-group">
+                        <label for="sort">Sort By:</label>
+                        <select id="sort" name="sort">
+                            <option value="district">District</option>
+                            <option value="date">Date</option>
+                        </select>
+                    </div>
+                    <button type="submit">Sort Datasets</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="model-management">
+            <h2>Model Management & Prediction</h2>
+            <form class="mb-3">
+                <fieldset>
+                    <legend>Deploy and Use Models</legend>
+                    <div class="form-group">
+                        <label for="model">Deploy Model:</label>
+                        <input type="file" id="model" name="model" required>
+                    </div>
+                    <button type="submit">Deploy Model</button>
+                </fieldset>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>Make Predictions</legend>
+                    <div class="form-group">
+                        <label for="prediction">Enter Data for Prediction:</label>
+                        <input type="text" id="prediction" name="prediction" placeholder="Enter prediction data" required>
+                    </div>
+                    <button type="submit">Predict</button>
+                </fieldset>
+            </form>
+
+            <div id="visualization" class="mt-4">
+                <h3>Data Visualization</h3>
+                <!-- Placeholder for data visualization -->
+                <div class="chart">Chart will be displayed here</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BizAnalytics System</p>
+    </footer>
+</body>
+
+</html>
