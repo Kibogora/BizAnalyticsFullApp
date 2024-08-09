@@ -1,15 +1,11 @@
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
-
-from app import db
-
+from application import db
 
 class User(db.Model):
     __tablename__ = 'users'
-    email = Column(String(20), primary_key=True)
-    name = Column(String(20), nullable=False)
-    role = Column(String(20), nullable=False)
-    password = Column(String(20), nullable=False)
+    email = db.Column(db.String(20), primary_key=True)
+    name = db.Column(db.String(20), nullable=False)
+    role = db.Column(db.String(20), nullable=False)
+    password = db.Column(db.String(20), nullable=False)
     
     @staticmethod
     def register_user(email, name, role, password):
@@ -20,9 +16,8 @@ class User(db.Model):
 
 class Datasets(db.Model):
     __tablename__ = 'datasets'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(20), nullable=False)
-    description = Column(String(20), nullable=False)
-    url = Column(String(20), nullable=False)
-    owner = Column(String(20), nullable=True)
-    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20), nullable=False)
+    description = db.Column(db.String(20), nullable=False)
+    url = db.Column(db.String(20), nullable=False)
+    owner = db.Column(db.String(20), nullable=True)
